@@ -1,0 +1,43 @@
+<section class="calculate">
+   <h1>Рассчитайте стоимость <br /> автомобиля в лизинг</h1>
+   <form class='calculate__content'>
+      <div class='calculate__item-inputs'>
+         <label class="input-primary">
+            <span class="input-primary__text-label">Стоимость автомобиля</span>
+            <div class="inner-input inner-input__price">
+               <input pattern="[0-9]{0,10}" type="text" id="price" class='input-primary__primary-input'>
+            </div>
+         </label>
+         <div class="wrapper-range">
+            <input type="range" min="1500000" max="10000000" value="3300000" step="1000" class="wrapper-range__range">
+            <div class="wrapper-range__progress"></div>
+         </div>
+      </div>
+      <div class='calculate__item-inputs'>
+         <label class="input-primary">
+            <span class="input-primary__text-label">Первоначальный взнос</span>
+            <div class="inner-input inner-input__starting">
+               <input pattern="[0-9]{0,10}" type="text" id="initial" class='input-primary__primary-input'>
+               <p class="inner-input__percent">13%</p>
+            </div>
+         </label>
+         <div class="wrapper-range">
+            <input type="range" min="1500000" max="10000000" value="4200000" step="1000" class="wrapper-range__range">
+            <div class="wrapper-range__progress"></div>
+         </div>
+      </div>
+      <div class='calculate__item-inputs'>
+         <label class="input-primary">
+            <span class="input-primary__text-label">Срок лизинга</span>
+            <div class="inner-input inner-input__mounth">
+               <input pattern="[0-9]{0,3}" type="text" class='input-primary__primary-input' value="6">
+            </div>
+         </label>
+         <div class="wrapper-range">
+            <input type="range" min="6" max="120" value="60" step="1" class="wrapper-range__range">
+            <div class="wrapper-range__progress"></div>
+         </div>
+      </div>
+   </form>
+   @@include('./resultBlock.html', {})
+</section>

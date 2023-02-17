@@ -1,0 +1,28 @@
+.result-block {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   align-items: center;
+   gap: 32px;
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      & span {
+         position: relative;
+         width: fit-content;
+         font-family: 'Nekst';
+         font-weight: 900;
+         font-size: var(--typography-h1);
+
+         &::after {
+            position: absolute;
+            content: '₽';
+            height: 100%;
+            right: -49px;
+            top: -5px;
+         }
+      }
+   }
+}

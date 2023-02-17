@@ -1,0 +1,29 @@
+:root {
+   --typography-h1: 54px;
+   --typography-h2: 40px;
+   --typography-subtitle1: 54px;
+   --typography-body1: 16px;
+   --typography-primary-input: 36px;
+}
+
+@media (min-width: 320px) {
+   :root {
+      --typography-h1: 34px;
+      --typography-h2: 28px;
+      --typography-subtitle1: 22px;
+      --typography-body1: 14px;
+      --typography-primary-input: 22px;
+      --typography-primary-button: 22px;
+   }
+}
+
+@media (min-width: 768px) {
+   :root {
+      --typography-h1: 54px;
+      --typography-h2: 40px;
+      --typography-subtitle1: 54px;
+      --typography-body1: 16px;
+      --typography-primary-input: 36px;
+      --typography-primary-button: 30px;
+   }
+}

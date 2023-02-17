@@ -1,0 +1,37 @@
+.calculate {
+   display: flex;
+   flex-direction: column;
+   padding: 216px 47px;
+
+   & h1 {
+      margin-bottom: 32px;
+
+      @include media(768) {
+         margin-bottom: 44px;
+      }
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 37px;
+
+      @include media(1120) {
+         flex-direction: column;
+         margin-bottom: 35px;
+      }
+   }
+
+   &__item-inputs {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      & .wrapper-range {
+         align-self: center;
+      }
+   }
+
+}

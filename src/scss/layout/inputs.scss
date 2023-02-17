@@ -1,0 +1,129 @@
+.input-primary {
+   display: flex;
+   flex-direction: column;
+   gap: 27px;
+
+   &__text-label {
+      font-size: $mainFontSise;
+      color: $secondaryColor;
+   }
+
+   &__primary-input {
+      position: relative;
+      width: 100%;
+      padding: 17px 24px 15px;
+      color: $inputColor;
+      font-weight: 900;
+      font-size: var(--typography-primary-button);
+      background: $grayBackgroundLight;
+      border-radius: $borderRadiusBtn;
+      cursor: pointer;
+
+      &:active {
+         color: $secondaryColor;
+         background: $whiteColor;
+         border: $borderActiveInput;
+      }
+
+      &:disabled {
+         opacity: 0.5;
+      }
+   }
+}
+
+.inner-input {
+   position: relative;
+
+   &__percent {
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      background: $rangerBg;
+      border-radius: 16px;
+      padding: 15px 15px;
+      color: $inputColor;
+      font-weight: 900;
+      font-family: 'Nekst';
+      color: $secondaryColor;
+      font-size: 20px;
+      line-height: 120%;
+   }
+
+   &__price::after {
+      position: absolute;
+      content: '₽';
+      right: 24px;
+      top: 17px;
+      color: $inputColor;
+      font-weight: 900;
+      font-family: 'Nekst';
+      color: $secondaryColor;
+      font-size: var(--typography-primary-button);
+   }
+
+   &__mounth::after {
+      position: absolute;
+      content: 'мес.';
+      right: 25px;
+      top: 20px;
+      color: $inputColor;
+      font-weight: 900;
+      font-family: 'Nekst';
+      color: $secondaryColor;
+      font-size: var(--typography-primary-button);
+   }
+
+   &__starting::after {
+      position: absolute;
+      content: '';
+      right: 25px;
+      top: 20px;
+      color: $inputColor;
+      font-weight: 900;
+      font-family: 'Nekst';
+      color: $secondaryColor;
+      font-size: var(--typography-primary-button);
+   }
+}
+
+
+.wrapper-range {
+   width: 90%;
+   position: relative;
+   top: -14px;
+   z-index: 5;
+
+   &__range {
+      appearance: none;
+      width: 100%;
+      height: 2px;
+      background-color: $rangerBg;
+      outline: none;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+      margin: 12px 0px 5px 0px;
+      cursor: pointer;
+
+      &:hover {
+         opacity: 1;
+      }
+
+      &::-webkit-slider-thumb {
+         appearance: none;
+         width: 20px;
+         height: 20px;
+         border-radius: 100%;
+         background: $orangeColor;
+      }
+   }
+
+   &__progress {
+      position: absolute;
+      content: '';
+      width: 50%;
+      height: 3px;
+      background-color: $orangeColor;
+      top: calc(50% + 1.5px);
+      z-index: 1;
+   }
+}

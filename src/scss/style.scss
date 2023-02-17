@@ -1,0 +1,26 @@
+@use 'sass:math';
+
+// Подключение шрифтов локально из папки "./src/fonts" 
+@import 'config/fonts';
+
+// Подключение sass функций и миксинов и рассширений стилей 
+@import 'config/functions';
+
+// Подключение переменных 
+@import 'config/vars';
+
+// Обнуление 
+@import 'config/reset';
+
+// Базовые размеры шрифтов
+@import 'config/typography';
+
+// Базовые стили
+@import 'config/base';
+
+// Подключение стилей отдельных блоков и секций 
+
+@import 'layout/buttons';
+@import 'layout/inputs';
+@import 'layout/calculate';
+@import 'layout/resultBlock';

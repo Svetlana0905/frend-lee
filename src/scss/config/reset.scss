@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  color: $fontColor;
+}
+
+html {
+  --brand: $orangeColor;
+  scrollbar-color: $orangeColor;
+}
+
+:root {
+  accent-color: var(--brand);
+}
+
+:focus-visible {
+  outline-color: var(--brand);
+}
+
+::selection {
+  background-color: var(--brand);
+}
+
+::marker {
+  color: var(--brand);
+}
+
+:is( ::-webkit-calendar-picker-indicator,
+  ::-webkit-clear-button,
+  ::-webkit-inner-spin-button,
+  ::-webkit-outer-spin-button) {
+  color: var(--brand);
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: $whiteColor;
+  font-size: $mainFontSise;
+  font-family: $mainFont;
+  font-weight: $mainWeight;
+  line-height: 1;
+}
+
+input,
+button,
+textarea {
+  font-family: $secondaryFontFamily;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
