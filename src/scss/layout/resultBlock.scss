@@ -1,26 +1,51 @@
 .result-block {
    display: grid;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: repeat(1, 1fr);
    align-items: center;
-   gap: 32px;
+   gap: 29px;
+
+   @include media(768) {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   @include media(1120) {
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   & .button-primary {
+      margin-top: 0;
+
+      @include media(768) {
+         margin-top: 10px;
+      }
+
+      @include media(1120) {
+         margin-top: 0;
+      }
+   }
 
    &__item {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 5px;
+
+      @include media(768) {
+         gap: 12px;
+      }
 
       & span {
-         position: relative;
          width: fit-content;
-         font-family: 'Nekst';
+         font-family: $secondaryFontFamily;
          font-weight: 900;
-         font-size: var(--typography-h1);
+         font-size: var(--typography-bold-text);
+      }
 
-         &::after {
-            position: absolute;
-            content: '₽';
-            height: 100%;
-            right: -49px;
+      & .rub {
+         display: inline-block;
+         position: relative;
+         top: -3px;
+
+         @include media(768) {
             top: -5px;
          }
       }

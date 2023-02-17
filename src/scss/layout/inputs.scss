@@ -1,28 +1,38 @@
 .input-primary {
    display: flex;
    flex-direction: column;
-   gap: 27px;
+   gap: 10px;
+
+   @include media(768) {
+      gap: 28px;
+   }
 
    &__text-label {
-      font-size: $mainFontSise;
+      font-size: var(--typography-text-label);
       color: $secondaryColor;
    }
 
    &__primary-input {
       position: relative;
       width: 100%;
-      padding: 17px 24px 15px;
+      padding: 16px 18px 16px;
       color: $inputColor;
       font-weight: 900;
       font-size: var(--typography-primary-button);
       background: $grayBackgroundLight;
+      border: $borderActiveInput;
       border-radius: $borderRadiusBtn;
       cursor: pointer;
+      transition: $standartTrans;
 
-      &:active {
+      @include media(768) {
+         padding: 15px 23px 13px;
+      }
+
+      &:active,
+      &:focus {
          color: $secondaryColor;
          background: $whiteColor;
-         border: $borderActiveInput;
       }
 
       &:disabled {
@@ -40,37 +50,48 @@
       right: 10px;
       background: $rangerBg;
       border-radius: 16px;
-      padding: 15px 15px;
+      padding: 14px 14px;
       color: $inputColor;
       font-weight: 900;
-      font-family: 'Nekst';
+      font-family: $secondaryFontFamily;
       color: $secondaryColor;
       font-size: 20px;
-      line-height: 120%;
+
+      @include media(768) {
+         padding: 17px 14px;
+      }
    }
 
    &__price::after {
       position: absolute;
       content: '₽';
-      right: 24px;
+      right: 19px;
       top: 17px;
       color: $inputColor;
       font-weight: 900;
-      font-family: 'Nekst';
+      font-family: $secondaryFontFamily;
       color: $secondaryColor;
       font-size: var(--typography-primary-button);
+
+      @include media(768) {
+         right: 24px;
+      }
    }
 
    &__mounth::after {
       position: absolute;
       content: 'мес.';
-      right: 25px;
+      right: 19px;
       top: 20px;
       color: $inputColor;
       font-weight: 900;
-      font-family: 'Nekst';
+      font-family: $secondaryFontFamily;
       color: $secondaryColor;
       font-size: var(--typography-primary-button);
+
+      @include media(768) {
+         right: 24px;
+      }
    }
 
    &__starting::after {
@@ -80,7 +101,7 @@
       top: 20px;
       color: $inputColor;
       font-weight: 900;
-      font-family: 'Nekst';
+      font-family: $secondaryFontFamily;
       color: $secondaryColor;
       font-size: var(--typography-primary-button);
    }
@@ -115,13 +136,22 @@
          border-radius: 100%;
          background: $orangeColor;
       }
+
+      &::-moz-range-thumb {
+         appearance: none;
+         width: 20px;
+         height: 20px;
+         border-radius: 100%;
+         background: $orangeColor;
+         border: 0;
+      }
    }
 
    &__progress {
       position: absolute;
       content: '';
       width: 50%;
-      height: 3px;
+      height: 2px;
       background-color: $orangeColor;
       top: calc(50% + 1.5px);
       z-index: 1;

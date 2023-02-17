@@ -11,7 +11,7 @@
 }
 
 h1 {
-  font-family: 'Nekst';
+  font-family: $secondaryFontFamily;
   font-weight: 900;
   font-size: var(--typography-h1);
   color: $fontColor;

@@ -4,6 +4,8 @@
    --typography-subtitle1: 54px;
    --typography-body1: 16px;
    --typography-primary-input: 36px;
+   --typography-text-label: 16px;
+   --typography-bold-text: 54px;
 }
 
 @media (min-width: 320px) {
@@ -14,6 +16,8 @@
       --typography-body1: 14px;
       --typography-primary-input: 22px;
       --typography-primary-button: 22px;
+      --typography-text-label: 14px;
+      --typography-bold-text: 22px;
    }
 }
 
@@ -25,5 +29,7 @@
       --typography-body1: 16px;
       --typography-primary-input: 36px;
       --typography-primary-button: 30px;
+      --typography-text-label: 16px;
+      --typography-bold-text: 54px;
    }
 }

@@ -1,7 +1,7 @@
 $mainFont: 'Gilroy'; // основное семейство шрифта
 $secondaryFontFamily: 'Nekst';
 $mainWeight: 400; // основное начертание шрифта
-$mainFontSise: 16px; // основной размер шрифрта
+$mainFontSise: var(--typography-body1); // основной размер шрифрта
 
 $fontColor: rgba(17, 17, 17, 1);
 $secondaryColor: rgba(87, 87, 87, 1);
@@ -14,5 +14,7 @@ $rangerBg: rgba(225, 225, 225, 1);
 
 $borderRadiusBtn: 16px;
 $borderActiveInput: 2px solid $grayBackgroundLight;
+
+$standartTrans: all 280ms ease-in-out 0ms;
 
 $primary-box-shadow-50: 0px 10px 15px -3px rgba($fontColor, 0.5), 0px 4px 6px -4px rgba($fontColor, 0.5);

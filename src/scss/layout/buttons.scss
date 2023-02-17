@@ -1,4 +1,5 @@
 .button-primary {
+   max-width: 426px;
    width: 100%;
    padding: 14px 0 18px;
    color: $whiteColor;
@@ -7,4 +8,18 @@
    line-height: 36px;
    border-radius: 40px;
    background: $orangeColor;
+   transition: $standartTrans;
+
+   &:hover {
+      background: $fontColor ;
+   }
+
+   &:active,
+   &:focus {
+      background: $secondaryColor;
+   }
+
+   &:disabled {
+      opacity: .4;
+   }
 }

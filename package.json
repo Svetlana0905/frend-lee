@@ -22,6 +22,7 @@
     "html"
   ],
   "license": "ISC",
+  "homepage": "https://svetlana0905.github.io/frend-lee",
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/polyfill": "^7.12.1",

@@ -1,25 +1,44 @@
 .calculate {
    display: flex;
    flex-direction: column;
-   padding: 216px 47px;
+   padding: 44px 21px;
+
+   @include media(768) {
+      padding: 64px 36px;
+   }
+
+   @include media(1120) {
+      padding: 216px 47px;
+   }
 
    & h1 {
-      margin-bottom: 32px;
+      margin-bottom: 34px;
 
       @include media(768) {
          margin-bottom: 44px;
+      }
+
+      @include media(1440) {
+         margin-bottom: 32px;
       }
    }
 
    &__content {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
-      gap: 32px;
-      margin-bottom: 37px;
+      gap: 7px;
+      margin-bottom: 7px;
+
+      @include media(768) {
+         gap: 21px;
+         margin-bottom: 26px;
+
+      }
 
       @include media(1120) {
-         flex-direction: column;
+         gap: 32px;
+         flex-direction: row;
          margin-bottom: 35px;
       }
    }

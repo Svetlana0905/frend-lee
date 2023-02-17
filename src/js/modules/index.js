@@ -1,7 +1,6 @@
 import { html, slider, progress, priceInput, initialInput, percent } from './../helpers/elementsNodeList'
 
 slider.oninput = function () {
-
   progress.style.width = (100 * (this.value - this.min)) / (this.max - this.min) + '%';
 };
 
